@@ -1,45 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ku" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Ziad Omar | Full Stack Web Developer — Liquid Glass Portfolio</title>
+  <title>Ziad Omar | Full Stack Web Developer</title>
   <link rel="shortcut icon" href="icon.png" type="image/png">
-  
-  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
-  <!-- Google Fonts: Plus Jakarta Sans + Outfit -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-   
-  </style>
+   <link rel="stylesheet" href="style.css">
+<base target="_blank">
 </head>
 <body>
 
+<!-- Liquid Background -->
+<div class="liquid-bg"></div>
+
+<!-- Particles Canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursorTrail"></div>
+
+<!-- Loading Screen -->
 <div class="loading-screen" id="loadingScreen">
   <div class="water-loader">
     <div class="drop"></div>
-    <p>rippling creativity...</p>
+    <p data-ku="xeyal dike..." data-ar="يتم التحميل..." data-en="loading...">xeyal dike...</p>
   </div>
 </div>
 
+<!-- Language Switcher -->
+<div class="lang-switcher">
+  <button class="lang-btn" data-lang="ku" onclick="setLanguage('ku')">KU</button>
+  <button class="lang-btn" data-lang="ar" onclick="setLanguage('ar')">AR</button>
+  <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+</div>
+
 <header>
-  <div class="container nav">
+  <div class="nav">
     <h1 class="logo"><i class="fa-solid fa-water"></i> <span>Coder</span>Ziad</h1>
     <input type="checkbox" id="menu-toggle">
     <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars-staggered"></i></label>
     <ul class="nav-links">
-      <li><a href="#home"><i class="fa-regular fa-compass"></i> Home</a></li>
-      <li><a href="#about"><i class="fa-regular fa-user"></i> About</a></li>
-      <li><a href="#skills"><i class="fa-solid fa-code"></i> Skills</a></li>
-      <li><a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
-      <li><a href="#experience"><i class="fa-regular fa-clock"></i> Experience</a></li>
-      <li><a href="#contact"><i class="fa-regular fa-message"></i> Contact</a></li>
+      <li><a href="#home" data-ku="Mal" data-ar="الرئيسية" data-en="Home">Mal</a></li>
+      <li><a href="#about" data-ku="Derbarê Min" data-ar="عني" data-en="About">Derbarê Min</a></li>
+      <li><a href="#skills" data-ku="Jêhatîbûn" data-ar="المهارات" data-en="Skills">Jêhatîbûn</a></li>
+      <li><a href="#projects" data-ku="Projeyên" data-ar="المشاريع" data-en="Projects">Projeyên</a></li>
+      <li><a href="#experience" data-ku="Tecrube" data-ar="الخبرة" data-en="Experience">Tecrube</a></li>
+      <li><a href="#contact" data-ku="Têkilî" data-ar="تواصل" data-en="Contact">Têkilî</a></li>
     </ul>
   </div>
 </header>
@@ -50,109 +60,285 @@
       <i class="fa-solid fa-code-branch"></i>
     </div>
     <div class="hero-text">
-      <h2>Hello, I'm <span class="typing-text"></span></h2>
-      <p style="font-size: 1.2rem;"><i class="fa-solid fa-droplet"></i> Full Stack Developer crafting <strong>fluid, modern web experiences</strong> with cutting-edge design.</p>
+      <h2>
+        <span data-ku="Silav, Ez " data-ar="مرحباً، أنا " data-en="Hello, I'm ">Silav, Ez </span>
+        <span class="typing-text"></span>
+      </h2>
+      <p>
+        <i class="fa-solid fa-droplet"></i> 
+        <span data-ku="Full Stack Developer ku <strong>web-a nûjen û hêja</strong> bi sêwirana pêşkeftî diafirîne." 
+              data-ar="مطور Full Stack يصنع <strong>تجارب ويب حديثة وسائلة</strong> بتصميم متطور." 
+              data-en="Full Stack Developer crafting <strong>fluid, modern web experiences</strong> with cutting-edge design.">
+          Full Stack Developer ku <strong>web-a nûjen û hêja</strong> bi sêwirana pêşkeftî diafirîne.
+        </span>
+      </p>
       <div class="btn-group">
-        <a href="#projects" class="btn"><i class="fa-regular fa-eye"></i> Explore Work</a>
-        <a href="#contact" class="btn"><i class="fa-regular fa-paper-plane"></i> Let's Connect</a>
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-regular fa-eye"></i> 
+          <span data-ku="Karên Min Bibîne" data-ar="استكشف الأعمال" data-en="Explore Work">Karên Min Bibîne</span>
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <i class="fa-regular fa-paper-plane"></i> 
+          <span data-ku="Têkilî Bide" data-ar="لنتواصل" data-en="Let's Connect">Têkilî Bide</span>
+        </a>
       </div>
     </div>
   </div>
-  <div class="scroll-indicator" style="margin-top: 50px; text-align: center; color: white;">↓ scroll ↓</div>
+  <div class="scroll-indicator">↓ <span data-ku="bişkûtin" data-ar="اسحب" data-en="scroll">bişkûtin</span> ↓</div>
 </section>
 
 <section id="about" class="section">
-  <div class="container">
-    <h3 data-aos="fade-up"><i class="fa-regular fa-face-smile"></i> About me</h3>
-    <div class="about-grid">
-      <div class="about-text" data-aos="fade-right">
-        <p style="font-size: 1.1rem;">I'm a passionate full-stack web developer with expertise in creating modern, responsive, and user-friendly web applications. 
-          I enjoy turning complex problems into simple, beautiful, and intuitive digital solutions.</p>
-        <p style="margin-top: 1rem;">Beyond coding, I explore emerging tech, contribute to open-source, and mentor aspiring developers.</p>
-        <div class="stats-row">
-          <div class="stat-card"><span class="stat-number" data-count="24">0</span><span>Projects</span></div>
-          <div class="stat-card"><span class="stat-number" data-count="6">0</span><span>Years+</span></div>
-          <div class="stat-card"><span class="stat-number" data-count="32">0</span><span>Clients</span></div>
+  <h3 data-aos="fade-up">
+    <i class="fa-regular fa-face-smile"></i> 
+    <span data-ku="Derbarê Min" data-ar="عنّي" data-en="About me">Derbarê Min</span>
+  </h3>
+  <div class="about-grid">
+    <div class="about-text" data-aos="fade-right">
+      <p data-ku="Ez pêşvebirekî Full Stack-ê bi şewq im ku bi avakirina sepanên web-a nûjen, bersivdar û bikarhêner-dost têkildar im. Ez ji veguheztina pirsgirêkên tevlihev bo çareseriyên sade, bedew û bingehîn hez dikim."
+         data-ar="أنا مطور Full Stack شغوف بخبرة في إنشاء تطبيقات ويب حديثة ومتجاوبة وسهلة الاستخدام. أستمتع بتحويل المشكلات المعقدة إلى حلول رقمية بسيطة وجميلة وبديهية."
+         data-en="I'm a passionate full-stack web developer with expertise in creating modern, responsive, and user-friendly web applications. I enjoy turning complex problems into simple, beautiful, and intuitive digital solutions.">
+        Ez pêşvebirekî Full Stack-ê bi şewq im ku bi avakirina sepanên web-a nûjen, bersivdar û bikarhêner-dost têkildar im. Ez ji veguheztina pirsgirêkên tevlihev bo çareseriyên sade, bedew û bingehîn hez dikim.
+      </p>
+      <p data-ku="Ji bilî kodkirinê, ez teknolojiyên nûjen vedikim, ji çavkaniya vekirî re beşdar dibim, û pêşvebîrên hêvîdar rêber dikim."
+         data-ar="بجانب البرمجة، أستكشف التقنيات الناشئة، أساهم في المصادر المفتوحة، وأوجه المطورين الطموحين."
+         data-en="Beyond coding, I explore emerging tech, contribute to open-source, and mentor aspiring developers.">
+        Ji bilî kodkirinê, ez teknolojiyên nûjen vedikim, ji çavkaniya vekirî re beşdar dibim, û pêşvebîrên hêvîdar rêber dikim.
+      </p>
+      <div class="stats-row">
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+          <span class="stat-number" data-count="24">0</span>
+          <span data-ku="Projeyên" data-ar="مشاريع" data-en="Projects">Projeyên</span>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+          <span class="stat-number" data-count="6">0</span>
+          <span data-ku="Sal+" data-ar="سنوات+" data-en="Years+">Sal+</span>
+        </div>
+        <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+          <span class="stat-number" data-count="32">0</span>
+          <span data-ku="Mişterî" data-ar="عملاء" data-en="Clients">Mişterî</span>
         </div>
       </div>
-      <div class="about-cards" data-aos="fade-left">
-        <div class="water-card"><i class="fa-regular fa-lightbulb"></i><h4>Fluid Creativity</h4><p>Innovative approaches & adaptive architecture</p></div>
-        <div class="water-card"><i class="fa-regular fa-gem"></i><h4>Premium Quality</h4><p>Pixel-perfect, high-performance results</p></div>
+    </div>
+    <div class="about-cards" data-aos="fade-left">
+      <div class="water-card">
+        <i class="fa-regular fa-lightbulb"></i>
+        <h4 data-ku="Xeyala Hêja" data-ar="إبداع سائل" data-en="Fluid Creativity">Xeyala Hêja</h4>
+        <p data-ku="Rêbazên nûjen û mîmarîya adapte" data-ar="تصميمات مبتكرة وبنية متكيفة" data-en="Innovative approaches & adaptive architecture">Rêbazên nûjen û mîmarîya adapte</p>
+      </div>
+      <div class="water-card">
+        <i class="fa-regular fa-gem"></i>
+        <h4 data-ku="Kalîteya Bilind" data-ar="جودة ممتازة" data-en="Premium Quality">Kalîteya Bilind</h4>
+        <p data-ku="Encamên pixel-perfekt û performansa bilind" data-ar="نتائج دقيقة وأداء عالي" data-en="Pixel-perfect, high-performance results">Encamên pixel-perfekt û performansa bilind</p>
       </div>
     </div>
   </div>
 </section>
 
 <section id="skills" class="section">
-  <div class="container">
-    <h3 data-aos="fade-up"><i class="fa-solid fa-crown"></i> Core Aqua-Skills</h3>
-    <div class="skills-grid" id="skillsGrid">
-      <div class="skill-item" data-aos="zoom-in"><i class="fa-brands fa-html5"></i><h4>HTML5</h4><div class="progress-wrap"><div class="progress-fill" data-width="96"></div></div></div>
-      <div class="skill-item" data-aos="zoom-in"><i class="fa-brands fa-css3-alt"></i><h4>CSS3</h4><div class="progress-wrap"><div class="progress-fill" data-width="92"></div></div></div>
-      <div class="skill-item" data-aos="zoom-in"><i class="fa-brands fa-js"></i><h4>JavaScript</h4><div class="progress-wrap"><div class="progress-fill" data-width="88"></div></div></div>
-      <div class="skill-item" data-aos="zoom-in"><i class="fa-brands fa-php"></i><h4>PHP</h4><div class="progress-wrap"><div class="progress-fill" data-width="84"></div></div></div>
-      <div class="skill-item" data-aos="zoom-in"><i class="fa-solid fa-database"></i><h4>MySQL</h4><div class="progress-wrap"><div class="progress-fill" data-width="79"></div></div></div>
-      <div class="skill-item" data-aos="zoom-in"><i class="fa-brands fa-react"></i><h4>React</h4><div class="progress-wrap"><div class="progress-fill" data-width="74"></div></div></div>
+  <h3 data-aos="fade-up">
+    <i class="fa-solid fa-crown"></i> 
+    <span data-ku="Jêhatîbûnên Sereke" data-ar="المهارات الأساسية" data-en="Core Aqua-Skills">Jêhatîbûnên Sereke</span>
+  </h3>
+  <div class="skills-grid" id="skillsGrid">
+    <div class="skill-item" data-aos="zoom-in">
+      <i class="fa-brands fa-html5" style="color:#E34F26"></i>
+      <h4>HTML5</h4>
+      <div class="progress-wrap"><div class="progress-fill" data-width="96"></div></div>
+    </div>
+    <div class="skill-item" data-aos="zoom-in">
+      <i class="fa-brands fa-css3-alt" style="color:#1572B6"></i>
+      <h4>CSS3</h4>
+      <div class="progress-wrap"><div class="progress-fill" data-width="92"></div></div>
+    </div>
+    <div class="skill-item" data-aos="zoom-in">
+      <i class="fa-brands fa-js" style="color:#F7DF1E"></i>
+      <h4>JavaScript</h4>
+      <div class="progress-wrap"><div class="progress-fill" data-width="88"></div></div>
+    </div>
+    <div class="skill-item" data-aos="zoom-in">
+      <i class="fa-brands fa-php" style="color:#777BB4"></i>
+      <h4>PHP</h4>
+      <div class="progress-wrap"><div class="progress-fill" data-width="84"></div></div>
+    </div>
+    <div class="skill-item" data-aos="zoom-in">
+      <i class="fa-solid fa-database" style="color:#F29111"></i>
+      <h4>MySQL</h4>
+      <div class="progress-wrap"><div class="progress-fill" data-width="79"></div></div>
+    </div>
+    <div class="skill-item" data-aos="zoom-in">
+      <i class="fa-brands fa-react" style="color:#61DAFB"></i>
+      <h4>React</h4>
+      <div class="progress-wrap"><div class="progress-fill" data-width="74"></div></div>
     </div>
   </div>
 </section>
 
 <section id="experience" class="section">
-  <div class="container">
-    <h3 data-aos="fade-up"><i class="fa-regular fa-building"></i> Flow of Experience</h3>
-    <div class="timeline">
-      <div class="timeline-piece" data-aos="fade-right"><div class="timeline-year">2023 - Present</div><div><h4>Full Stack Developer</h4><p>Tech Solutions Inc. — leading development of scalable web apps, API integration, team mentorship.</p></div></div>
-      <div class="timeline-piece" data-aos="fade-left"><div class="timeline-year">2021 - 2023</div><div><h4>Frontend Architect</h4><p>Digital Agency — built high-end interfaces, animations, performance optimizations.</p></div></div>
-      <div class="timeline-piece" data-aos="fade-right"><div class="timeline-year">2020 - 2021</div><div><h4>Creative Intern</h4><p>Startup lab — full-stack prototyping, client collaboration, responsive designs.</p></div></div>
+  <h3 data-aos="fade-up">
+    <i class="fa-regular fa-building"></i> 
+    <span data-ku="Rêya Tecrubeyê" data-ar="مسار الخبرة" data-en="Flow of Experience">Rêya Tecrubeyê</span>
+  </h3>
+  <div class="timeline">
+    <div class="timeline-piece" data-aos="fade-right">
+      <div class="timeline-year">2023 - <span data-ku="Niha" data-ar="الآن" data-en="Present">Niha</span></div>
+      <div>
+        <h4 data-ku="Full Stack Developer" data-ar="مطور Full Stack" data-en="Full Stack Developer">Full Stack Developer</h4>
+        <p data-ku="Tech Solutions Inc. — serokatiya pêşvebirina sepanên web-a berfireh, yekbûna API, rêberiya tîmê."
+           data-ar="Tech Solutions Inc. — قيادة تطوير تطبيقات ويب قابلة للتوسع، دمج APIs، إرشاد الفريق."
+           data-en="Tech Solutions Inc. — leading development of scalable web apps, API integration, team mentorship.">Tech Solutions Inc. — serokatiya pêşvebirina sepanên web-a berfireh, yekbûna API, rêberiya tîmê.</p>
+      </div>
+    </div>
+    <div class="timeline-piece" data-aos="fade-left">
+      <div class="timeline-year">2021 - 2023</div>
+      <div>
+        <h4 data-ku="Frontend Architect" data-ar="مهندس واجهات أمامية" data-en="Frontend Architect">Frontend Architect</h4>
+        <p data-ku="Digital Agency — avakirina rûyên bilind, anîmasyon, optîmîzasyona performansê."
+           data-ar="Digital Agency — بناء واجهات عالية المستوى، رسوم متحركة، تحسين الأداء."
+           data-en="Digital Agency — built high-end interfaces, animations, performance optimizations.">Digital Agency — avakirina rûyên bilind, anîmasyon, optîmîzasyona performansê.</p>
+      </div>
+    </div>
+    <div class="timeline-piece" data-aos="fade-right">
+      <div class="timeline-year">2020 - 2021</div>
+      <div>
+        <h4 data-ku="Stajyerê Çêker" data-ar="متدرب إبداعي" data-en="Creative Intern">Stajyerê Çêker</h4>
+        <p data-ku="Startup lab — prototîp-kirina Full Stack, hevkariya mişterî, sêwirana bersivdar."
+           data-ar="Startup lab — نماذج Full Stack أولية، تعاون مع العملاء، تصاميم متجاوبة."
+           data-en="Startup lab — full-stack prototyping, client collaboration, responsive designs.">Startup lab — prototîp-kirina Full Stack, hevkariya mişterî, sêwirana bersivdar.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="projects" class="section">
-  <div class="container">
-    <h3 data-aos="fade-up"><i class="fa-regular fa-star"></i> Liquid Projects</h3>
-    <div class="projects-grid">
-      <div class="project-card" data-aos="flip-up"><i class="fa-solid fa-globe"></i><h4>Portfolio Wave</h4><p>Responsive glassmorphic portfolio</p></div>
-      <div class="project-card" data-aos="flip-up"><i class="fa-solid fa-cloud-arrow-up"></i><h4>DropShare</h4><p>Secure file sharing (PHP + AJAX)</p></div>
-      <div class="project-card" data-aos="flip-up"><i class="fa-solid fa-chart-line"></i><h4>Expense Flow</h4><p>Desktop app with Electron + PHP</p></div>
-      <div class="project-card" data-aos="flip-up"><i class="fa-solid fa-hospital-user"></i><h4>Clinic AquaSys</h4><p>Complete hospital management system</p></div>
-      <div class="project-card" data-aos="flip-up"><i class="fa-solid fa-university"></i><h4>UniPortal</h4><p>Dynamic university management</p></div>
-<div class="project-card" data-aos="flip-up">
-  <img src="img.png" alt="Storix" style="width: 100px; margin-bottom: 1rem;">
-  <h4>Storix</h4>
-  <p>Professional Accounting System | Inventory, Invoices, Financial Reports</p>
-</div>
-        <div class="project-card" data-aos="flip-up"><i class="fa-solid fa-utensils"></i><h4>RestoManager</h4><p>POS & order tracking with dashboard</p></div>
+  <h3 data-aos="fade-up">
+    <i class="fa-regular fa-star"></i> 
+    <span data-ku="Projeyên Hêja" data-ar="مشاريع سائلة" data-en="Liquid Projects">Projeyên Hêja</span>
+  </h3>
+  <div class="projects-grid">
+    <div class="project-card" data-aos="flip-up">
+      <i class="fa-solid fa-globe"></i>
+      <h4>Portfolio Wave</h4>
+      <p data-ku="Portfolio-ya glassmorphic a bersivdar" data-ar="محفظة زجاجية متجاوبة" data-en="Responsive glassmorphic portfolio">Portfolio-ya glassmorphic a bersivdar</p>
+      <div class="project-tags">
+        <span class="project-tag">HTML5</span>
+        <span class="project-tag">CSS3</span>
+        <span class="project-tag">JS</span>
+      </div>
+    </div>
+    <div class="project-card" data-aos="flip-up">
+      <i class="fa-solid fa-cloud-arrow-up"></i>
+      <h4>DropShare</h4>
+      <p data-ku="Parvekirina pelan bi ewlehî (PHP + AJAX)" data-ar="مشاركة ملفات آمنة (PHP + AJAX)" data-en="Secure file sharing (PHP + AJAX)">Parvekirina pelan bi ewlehî (PHP + AJAX)</p>
+      <div class="project-tags">
+        <span class="project-tag">PHP</span>
+        <span class="project-tag">MySQL</span>
+        <span class="project-tag">AJAX</span>
+      </div>
+    </div>
+    <div class="project-card" data-aos="flip-up">
+      <i class="fa-solid fa-chart-line"></i>
+      <h4>Expense Flow</h4>
+      <p data-ku="Sepana desktop bi Electron + PHP" data-ar="تطبيق سطح مكتب مع Electron + PHP" data-en="Desktop app with Electron + PHP">Sepana desktop bi Electron + PHP</p>
+      <div class="project-tags">
+        <span class="project-tag">Electron</span>
+        <span class="project-tag">Node.js</span>
+        <span class="project-tag">PHP</span>
+      </div>
+    </div>
+    <div class="project-card" data-aos="flip-up">
+      <i class="fa-solid fa-hospital-user"></i>
+      <h4>Clinic AquaSys</h4>
+      <p data-ku="Sîstema rêvebirina nexweşxaneyê ya tevahî" data-ar="نظام إدارة مستشفى كامل" data-en="Complete hospital management system">Sîstema rêvebirina nexweşxaneyê ya tevahî</p>
+      <div class="project-tags">
+        <span class="project-tag">Laravel</span>
+        <span class="project-tag">MySQL</span>
+        <span class="project-tag">Bootstrap</span>
+      </div>
+    </div>
+    <div class="project-card" data-aos="flip-up">
+      <i class="fa-solid fa-university"></i>
+      <h4>UniPortal</h4>
+      <p data-ku="Rêvebirina zanîngehê ya dînamîk" data-ar="إدارة جامعية ديناميكية" data-en="Dynamic university management">Rêvebirina zanîngehê ya dînamîk</p>
+      <div class="project-tags">
+        <span class="project-tag">PHP</span>
+        <span class="project-tag">jQuery</span>
+        <span class="project-tag">MySQL</span>
+      </div>
+    </div>
+    <div class="project-card" data-aos="flip-up">
+      <img src="img.png" alt="Storix" style="width: 100px; margin-bottom: 1rem;">
+      <h4>Storix</h4>
+      <p data-ku="Sîstema Hesabê ya Profesyonel | Envanter, Fatûre, Raporên Darayî"
+         data-ar="نظام محاسبة احترافي | المخزون، الفواتير، التقارير المالية"
+         data-en="Professional Accounting System | Inventory, Invoices, Financial Reports">Sîstema Hesabê ya Profesyonel | Envanter, Fatûre, Raporên Darayî</p>
+      <div class="project-tags">
+        <span class="project-tag">PHP</span>
+        <span class="project-tag">MySQL</span>
+        <span class="project-tag">Chart.js</span>
+      </div>
+    </div>
+    <div class="project-card" data-aos="flip-up">
+      <i class="fa-solid fa-utensils"></i>
+      <h4>RestoManager</h4>
+      <p data-ku="POS & şopandina fermanê bi dashboard" data-ar="نقاط البيع وتتبع الطلبات مع لوحة تحكم" data-en="POS & order tracking with dashboard">POS & şopandina fermanê bi dashboard</p>
+      <div class="project-tags">
+        <span class="project-tag">React</span>
+        <span class="project-tag">Node.js</span>
+        <span class="project-tag">Socket.io</span>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="contact" class="section">
-  <div class="container">
-    <h3 data-aos="fade-up"><i class="fa-regular fa-envelope"></i> Ripple of Connection</h3>
-    <div class="contact-card" data-aos="zoom-in">
-      <div class="contact-row"><i class="fa-regular fa-envelope"></i><div><h4>Email</h4><p>ziyadelomar9@gmail.com</p></div></div>
-      <div class="contact-row"><i class="fa-regular fa-location-dot"></i><div><h4>Location</h4><p>Syria / Qamishlo </p></div></div>
-      <div class="contact-row"><i class="fa-regular fa-calendar-check"></i><div><h4>Availability</h4><p>Open for freelance & collaborations</p></div></div>
-      <div class="social-links">
-  <a href="https://www.facebook.com/share/19vy1XrWCk/" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-  <a href="https://www.instagram.com/coder_ziad" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-  <a href="https://wa.me/963989401424" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
-</div>
+  <h3 data-aos="fade-up">
+    <i class="fa-regular fa-envelope"></i> 
+    <span data-ku="Têkilî Bide" data-ar="موجة التواصل" data-en="Ripple of Connection">Têkilî Bide</span>
+  </h3>
+  <div class="contact-card" data-aos="zoom-in">
+    <div class="contact-row">
+      <i class="fa-regular fa-envelope"></i>
+      <div>
+        <h4 data-ku="E-peyam" data-ar="البريد" data-en="Email">E-peyam</h4>
+        <p>ziyadelomar9@gmail.com</p>
+      </div>
+    </div>
+    <div class="contact-row">
+      <i class="fa-regular fa-location-dot"></i>
+      <div>
+        <h4 data-ku="Cîh" data-ar="الموقع" data-en="Location">Cîh</h4>
+        <p data-ku="Sûrî / Qamişlo" data-ar="سوريا / القامشلي" data-en="Syria / Qamishlo">Sûrî / Qamişlo</p>
+      </div>
+    </div>
+    <div class="contact-row">
+      <i class="fa-regular fa-calendar-check"></i>
+      <div>
+        <h4 data-ku="Berdestî" data-ar="التوفر" data-en="Availability">Berdestî</h4>
+        <p data-ku="Ji bo freelance & hevkariyê vekirî" data-ar="متاح للعمل الحر والتعاون" data-en="Open for freelance & collaborations">Ji bo freelance & hevkariyê vekirî</p>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="https://www.facebook.com/share/19vy1XrWCk/" target="_blank" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/coder_ziad" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/963989401424" target="_blank" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
+      <a href="#" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container">
-    <p>© 2022 Ziad Omar — crafted with <i class="fa-solid fa-droplet"></i> water glass aesthetics</p>
-    <div class="footer-links" style="display: flex; gap: 20px; justify-content: center; margin-top: 15px;">
-      <a href="#home" style="color: white; text-decoration: none;">Home</a>
-      <a href="#about" style="color: white; text-decoration: none;">About</a>
-      <a href="#skills" style="color: white; text-decoration: none;">Skills</a>
-      <a href="#projects" style="color: white; text-decoration: none;">Projects</a>
-      <a href="#contact" style="color: white; text-decoration: none;">Contact</a>
-    </div>
+  <p>
+    © 2026 Ziad Omar — 
+    <span data-ku="bi estetîka ava şûşeyî hatiye çêkirin" data-ar="مصنوع بتصميم زجاج مائي" data-en="crafted with water glass aesthetics">bi estetîka ava şûşeyî hatiye çêkirin</span>
+    <i class="fa-solid fa-droplet" style="color: var(--primary);"></i>
+  </p>
+  <div class="footer-links">
+    <a href="#home" data-ku="Mal" data-ar="الرئيسية" data-en="Home">Mal</a>
+    <a href="#about" data-ku="Derbarê Min" data-ar="عني" data-en="About">Derbarê Min</a>
+    <a href="#skills" data-ku="Jêhatîbûn" data-ar="المهارات" data-en="Skills">Jêhatîbûn</a>
+    <a href="#projects" data-ku="Projeyên" data-ar="المشاريع" data-en="Projects">Projeyên</a>
+    <a href="#contact" data-ku="Têkilî" data-ar="تواصل" data-en="Contact">Têkilî</a>
   </div>
 </footer>
 
@@ -161,82 +347,258 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
-  (function() {
-    AOS.init({ duration: 1000, once: true, offset: 80 });
-    setTimeout(() => {
-      const loader = document.getElementById('loadingScreen');
-      if(loader) loader.classList.add('hidden');
-    }, 800);
+  // ===== LANGUAGE SYSTEM =====
+  let currentLang = 'ku';
 
-    new Typed('.typing-text', {
-      strings: ['Ziad Al-Omar', 'Web Alchemist', 'Full Stack Creator'],
+  const translations = {
+    ku: {
+      typing: ['Ziad Al-Omar', 'Pêşvebîrê Web', 'Full Stack Creator', 'Hunermendê Kodê'],
+      loading: 'xeyal dike...'
+    },
+    ar: {
+      typing: ['زياد العمر', 'ساحر الويب', 'مبدع Full Stack', 'فنان الكود'],
+      loading: 'يتم التحميل...'
+    },
+    en: {
+      typing: ['Ziad Al-Omar', 'Web Alchemist', 'Full Stack Creator', 'Code Artist'],
+      loading: 'loading...'
+    }
+  };
+
+  let typedInstance = null;
+
+  function setLanguage(lang) {
+    currentLang = lang;
+
+    // Update document direction
+    if(lang === 'en') {
+      document.documentElement.lang = 'en';
+      document.documentElement.dir = 'ltr';
+    } else {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = 'rtl';
+    }
+
+    // Update active button
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.remove('active');
+      if(btn.dataset.lang === lang) btn.classList.add('active');
+    });
+
+    // Update all text elements
+    document.querySelectorAll('[data-ku][data-ar][data-en]').forEach(el => {
+      el.textContent = el.getAttribute('data-' + lang);
+    });
+
+    // Update loading text
+    const loadingText = document.querySelector('.water-loader p');
+    if(loadingText) loadingText.textContent = translations[lang].loading;
+
+    // Update Typed.js
+    if(typedInstance) typedInstance.destroy();
+    typedInstance = new Typed('.typing-text', {
+      strings: translations[lang].typing,
       typeSpeed: 65, backSpeed: 50, loop: true
     });
 
-    const backBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if(window.scrollY > 350) backBtn.classList.add('visible');
-      else backBtn.classList.remove('visible');
+    // Update carousel direction if exists
+    updateCarouselDirection();
+  }
+
+  function updateCarouselDirection() {
+    // This function can be extended for RTL/LTR carousel
+  }
+
+  // Initialize
+  document.addEventListener('DOMContentLoaded', () => {
+    setLanguage('ku');
+  });
+
+  // ===== AOS INIT =====
+  AOS.init({ duration: 1000, once: true, offset: 80 });
+
+  // ===== LOADING SCREEN =====
+  setTimeout(() => {
+    const loader = document.getElementById('loadingScreen');
+    if(loader) loader.classList.add('hidden');
+  }, 800);
+
+  // ===== BACK TO TOP =====
+  const backBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if(window.scrollY > 350) backBtn.classList.add('visible');
+    else backBtn.classList.remove('visible');
+  });
+  backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // ===== SKILL BARS =====
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        const fills = entry.target.querySelectorAll('.progress-fill');
+        fills.forEach(fill => {
+          const widthVal = fill.getAttribute('data-width');
+          fill.style.width = widthVal + '%';
+        });
+        skillObserver.unobserve(entry.target);
+      }
     });
-    backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }, { threshold: 0.4 });
+  const skillContainer = document.getElementById('skillsGrid');
+  if(skillContainer) skillObserver.observe(skillContainer);
 
-    // skill bars observer
-    const skillObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          const fills = entry.target.querySelectorAll('.progress-fill');
-          fills.forEach(fill => {
-            const widthVal = fill.getAttribute('data-width');
-            fill.style.width = widthVal + '%';
-          });
-          skillObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.4 });
-    const skillContainer = document.getElementById('skillsGrid');
-    if(skillContainer) skillObserver.observe(skillContainer);
-
-    // stats counter
-    const statObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          const numbers = entry.target.querySelectorAll('.stat-number');
-          numbers.forEach(stat => {
-            const target = parseInt(stat.getAttribute('data-count'));
-            let current = 0;
-            const duration = 1500;
-            const stepTime = 16;
-            const steps = duration / stepTime;
-            const increment = target / steps;
-            const timer = setInterval(() => {
-              current += increment;
-              if(current >= target) {
-                stat.innerText = target;
-                clearInterval(timer);
-              } else stat.innerText = Math.floor(current);
-            }, stepTime);
-          });
-          statObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    const statsSection = document.querySelector('.stats-row');
-    if(statsSection) statObserver.observe(statsSection);
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const targetId = this.getAttribute('href');
-        if(targetId === '#') return;
-        const target = document.querySelector(targetId);
-        if(target) {
-          e.preventDefault();
-          window.scrollTo({ top: target.offsetTop - 95, behavior: 'smooth' });
-          const toggle = document.getElementById('menu-toggle');
-          if(toggle && toggle.checked) toggle.checked = false;
-        }
-      });
+  // ===== STATS COUNTER =====
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        const numbers = entry.target.querySelectorAll('.stat-number');
+        numbers.forEach(stat => {
+          const target = parseInt(stat.getAttribute('data-count'));
+          let current = 0;
+          const duration = 1500;
+          const stepTime = 16;
+          const steps = duration / stepTime;
+          const increment = target / steps;
+          const timer = setInterval(() => {
+            current += increment;
+            if(current >= target) {
+              stat.innerText = target;
+              clearInterval(timer);
+            } else stat.innerText = Math.floor(current);
+          }, stepTime);
+        });
+        statObserver.unobserve(entry.target);
+      }
     });
-  })();
+  }, { threshold: 0.5 });
+  const statsSection = document.querySelector('.stats-row');
+  if(statsSection) statObserver.observe(statsSection);
+
+  // ===== SMOOTH SCROLL =====
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if(targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if(target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.offsetTop - 95, behavior: 'smooth' });
+        const toggle = document.getElementById('menu-toggle');
+        if(toggle && toggle.checked) toggle.checked = false;
+      }
+    });
+  });
+
+  // ===== CUSTOM CURSOR =====
+  const cursor = document.getElementById('cursor');
+  const cursorTrail = document.getElementById('cursorTrail');
+
+  if(window.innerWidth > 768) {
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX - 10 + 'px';
+      cursor.style.top = e.clientY - 10 + 'px';
+      setTimeout(() => {
+        cursorTrail.style.left = e.clientX - 4 + 'px';
+        cursorTrail.style.top = e.clientY - 4 + 'px';
+      }, 100);
+    });
+    document.querySelectorAll('a, button, .project-card, .skill-item').forEach(el => {
+      el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+      el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+    });
+  }
+
+  // ===== PARTICLES SYSTEM =====
+  const canvas = document.getElementById('particles-canvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const particles = [];
+  const particleCount = 50;
+
+  class Particle {
+    constructor() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 3 + 1;
+      this.speedX = Math.random() * 1 - 0.5;
+      this.speedY = Math.random() * 1 - 0.5;
+      this.opacity = Math.random() * 0.5 + 0.2;
+    }
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if(this.x > canvas.width) this.x = 0;
+      if(this.x < 0) this.x = canvas.width;
+      if(this.y > canvas.height) this.y = 0;
+      if(this.y < 0) this.y = canvas.height;
+    }
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(0, 212, 255, ${this.opacity})`;
+      ctx.fill();
+    }
+  }
+
+  function initParticles() {
+    for(let i = 0; i < particleCount; i++) particles.push(new Particle());
+  }
+
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for(let i = 0; i < particles.length; i++) {
+      particles[i].update();
+      particles[i].draw();
+      for(let j = i; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if(distance < 100) {
+          ctx.beginPath();
+          ctx.strokeStyle = `rgba(0, 212, 255, ${0.1 * (1 - distance/100)})`;
+          ctx.lineWidth = 1;
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(animateParticles);
+  }
+
+  initParticles();
+  animateParticles();
+
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+
+  // ===== PARALLAX =====
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallax = document.querySelector('.liquid-bg');
+    if(parallax) parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+  });
+
+  // ===== 3D TILT FOR PROJECT CARDS =====
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = (y - centerY) / 20;
+      const rotateY = (centerX - x) / 20;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+    });
+  });
 </script>
 </body>
 </html>
